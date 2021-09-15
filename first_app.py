@@ -11,7 +11,8 @@ st.write("Buscador de ranking:")
 
 
 keyword = st.text_input("KEYWORD", '')
-api_search = f'https://api.mercadolibre.com/sites/MLA/search?q={keyword}' 
+site = st.text_input("site", "MLA")
+api_search = f'https://api.mercadolibre.com/{site}/MLA/search?q={keyword}' 
 
 for keyword in keyword:
     data = []
